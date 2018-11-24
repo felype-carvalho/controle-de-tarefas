@@ -1,0 +1,30 @@
+body {
+	margin: 0;
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+* {
+	margin: 0;
+}
+.divPostite {
+	width: 20%;
+	height: 300px;
+	position: relative;
+	display: inline-block;
+}
+
+.divBotoes {
+	width: 100%;
+}
+
+.texto {
+	height: 80%
+
+}
+
+.botoes {
+	float: right;
+	height: 45px;
+	width: 45px;
+}
