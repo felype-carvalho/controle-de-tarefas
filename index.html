@@ -1,9 +1,11 @@
+<!doctype html>
 <html>
 <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="index.css">
 	<title>Projeto Controle de Tarefas</title>
-	<script type="text/javascript" src="produtos.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
     <div>
@@ -17,7 +19,7 @@
             </div>
             <div>
                 <label for="cor">Escolha uma cor</label>
-                <input type="color" id="cor" class="color" />
+                <input type="color" id="btnCor" class="color" />
                 <input type="button" id="btnAdd" value="Adicionar"/>  
             </div>
         </form>
@@ -26,22 +28,24 @@
         <div>
             <h3>Notas Salvas</h3>
         </div>
-        <div name="postites">
-            <div name="first" class="divPostite" style="background-color: red">
+        <div name="notas" id="notas">
+            <div name="first" class="divNotas" style="background-color:">
                 <div name="texto" class="texto">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    uis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Bem-Vindo</p>
                 </div>
                 <div name="botoes" class="divBotoes">
-                    <input type="button" value="A" class="botoes">
-                    <input type="button" value="B" class="botoes">
-                    <input type="button" value="C" class="botoes">
+                    <button class="botoes">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                   <button class="botoes">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="botoes">
+                        <i class="fas fa-check"></i>
+                    </button>
                 </div>
             </div>
         </div>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
