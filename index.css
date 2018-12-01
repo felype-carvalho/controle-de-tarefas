@@ -8,12 +8,14 @@ body {
 	margin: 0;
 }
 .divNotas {
-	width: 20%;
+	background-color: ;
+	width: 250px;
 	height: 300px;
 	position: relative;
 	display: inline-block;
 	border: 3px solid black;
 	border-radius: 5px;
+	margin: 25px;
 }
 
 .divBotoes {
