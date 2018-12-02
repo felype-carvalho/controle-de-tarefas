@@ -15,12 +15,12 @@
         <h3>Crie uma nova nota</h3>
         <form>
             <div>
-                <input type="text" id="inputTexto">
+                <input type="text" id="inputTexto" required="required">
             </div>
             <div>
                 <label for="cor">Escolha uma cor</label>
                 <input type="color" id="btnCor" class="color" />
-                <input type="button" id="btnAdd" value="Adicionar"/>  
+                <input type="submit" id="btnAdd" value="Adicionar"/>  
             </div>
         </form>
     </div>
@@ -28,19 +28,19 @@
         <div>
             <h3>Notas Salvas</h3>
         </div>
-        <div name="notas" id="notas">
-            <div id="nota" name="first" class="nota" style="background-color: cor" >
-                <div name="texto" class="texto">
+        <div id="notas">
+            <div id="nota" name="first" class="nota">
+                <div class="divTexto">
                     <p>Bem-Vindo</p>
                 </div>
-                <div name="botoes" class="divBotoes">
-                    <button class="botoes">
+                <div class="divBotoes">
+                    <button class="btn">
                         <i class="fas fa-trash-alt"></i>
                     </button>
-                   <button class="botoes">
+                   <button class="btn">
                         <i class="fas fa-edit"></i>
                     </button>
-                    <button class="botoes">
+                    <button class="btn">
                         <i class="fas fa-check"></i>
                     </button>
                 </div>
