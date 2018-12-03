@@ -1,6 +1,8 @@
 var cor = document.getElementById("btnCor");
 inputTexto.textContent = inputTexto;
 var texto = document.getElementById("inputTexto");
+var btnApagar = document.getElementById("btnApagar");
+var nota;
 
 function criarNota(){
 	console.log(cor.value);
@@ -55,12 +57,33 @@ function criarNota(){
 
 	/* Div de Botões */
 	divBotoes.classList.add("divBotoes");
-	btn1.classList.add("btn");
+	btn1.classList.add("btn", "btn-apagar");
 	btn2.classList.add("btn");	
 	btn3.classList.add("btn");
-	incone1.classList.add("fa-trash-alt", "fas");
+	incone1.classList.add("fa-trash-alt", "fas", "btn-apagar");
 	incone2.classList.add("fa-edit", "fas");
 	incone3.classList.add("fa-check", "fas");	
+}
+
+var btnApagar = document.querySelectorAll(".btn-apagar");
+btnApagar.forEach(function(botao){
+	botao.addEventListener("click", apagarNota);
+});
+
+function apagarNota (event) {
+	console.log("BOI BOI MINI BOI BOI BOI");
+		var nota;
+		if(event.target.hasChildNodes()) {
+			nota = event.target.parentNode.parentNode;
+		} else {
+			nota = event.target.parentNode.parentNode.parentNode;
+		}
+		nota.classList.add("fade-out");
+
+		setTimeout(function(){
+			nota.remove();
+		}, 1000);
+		return btnApagar;
 }
 
 btnAdd.addEventListener("click", function(event) {
@@ -69,3 +92,5 @@ btnAdd.addEventListener("click", function(event) {
 	criarNota();
 
 });
+
+
