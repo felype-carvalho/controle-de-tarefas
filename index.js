@@ -94,5 +94,3 @@ btnAdd.addEventListener("click", function(event) {
 	criarNota();
 
 });
-
-
