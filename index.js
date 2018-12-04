@@ -60,15 +60,12 @@ function criarNota(){
 	btn1.classList.add("btn", "btn-apagar");
 	btn2.classList.add("btn");	
 	btn3.classList.add("btn");
-	incone1.classList.add("fa-trash-alt", "fas", "btn-apagar");
+	incone1.classList.add("fa-trash-alt", "fas");
 	incone2.classList.add("fa-edit", "fas");
-	incone3.classList.add("fa-check", "fas");	
-}
+	incone3.classList.add("fa-check", "fas");
 
-var btnApagar = document.querySelectorAll(".btn-apagar");
-btnApagar.forEach(function(botao){
-	botao.addEventListener("click", apagarNota);
-});
+	btn1.addEventListener("click", apagarNota);	
+}
 
 function apagarNota (event) {
 	console.log("BOI BOI MINI BOI BOI BOI");
@@ -85,6 +82,11 @@ function apagarNota (event) {
 		}, 1000);
 		return btnApagar;
 }
+
+var btnApagar = document.querySelectorAll(".btn-apagar");
+btnApagar.forEach(function(botao){
+	botao.addEventListener("click", apagarNota);
+});
 
 btnAdd.addEventListener("click", function(event) {
 	event.preventDefault();
