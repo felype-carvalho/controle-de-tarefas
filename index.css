@@ -14,9 +14,10 @@ body {
 	height: 300px;
 	position: relative;
 	display: inline-block;
-	border: 3px solid black;
+	border: 2px solid black;
 	border-radius: 5px;
-	margin: 25px;
+	margin: 20px;
+	box-shadow: 1px 1px 3px black;
 }
 
 .divBotoes {
@@ -53,4 +54,12 @@ body {
 
 .invisivel{
 	display: none;
+}
+
+#inputTexto {
+	width: 550px;
+}
+
+#btnAdd{
+	border-radius: 5px;
 }

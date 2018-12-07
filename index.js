@@ -1,5 +1,3 @@
-var cor = document.getElementById("btnCor");
-var texto = document.getElementById("inputTexto");
 var form = document.querySelector("#form-notas");
 var btnSalvar = criarBotaoSalvar("fa-check");
 
@@ -64,8 +62,12 @@ function criarNota(texto, cor){
 
 btnAdd.addEventListener("click", function(event) {
 	event.preventDefault();
-
+	if (form.texto.value == ""){
+		alert("A nota não pode estar vazia.");
+	}
+	else{
 	criarNota();
+	}
 
 });
 
@@ -111,13 +113,10 @@ function editarNota (event) {
 		nota = event.target.parentNode.parentNode.parentNode;
 	}
 	var texto = nota.querySelector(".texto").textContent;
-
-	console.log(texto);
 	form.texto.value = texto;
 
 	btnAdd.classList.add('invisivel');
 	btnCor.classList.add('invisivel');
-	labelCor.classList.add("invisivel");
 
 	form.appendChild(btnSalvar);
 };
@@ -130,7 +129,6 @@ btnSalvar.addEventListener("click", function(event){
 	btnSalvar.remove();
 	btnAdd.classList.remove("invisivel");
 	btnCor.classList.remove("invisivel");
-	labelCor.classList.remove("invisivel");
 
 	form.reset();
 });
