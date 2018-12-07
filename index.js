@@ -3,7 +3,7 @@ var texto = document.getElementById("inputTexto");
 var form = document.querySelector("#form-notas");
 var btnSalvar = criarBotaoSalvar("fa-check");
 
-function criarNota(){
+function criarNota(texto, cor){
 
 	//// Criação dos elementos da nota.////
 
@@ -13,7 +13,7 @@ function criarNota(){
 	/* Div de Texto*/
 	var divTexto = document.createElement("div");
 	var paragrafo = document.createElement("p");
-	paragrafo.textContent = texto.value;
+	paragrafo.textContent = form.texto.value;
 	//var exTexto = document.createTextNode(texto.value);
 
 	/* Div de Botões */
@@ -44,7 +44,7 @@ function criarNota(){
 
 	/* Div Principal */
 	nota.classList.add("nota");
-	nota.style.backgroundColor = cor.value;
+	nota.style.backgroundColor = form.cor.value;
 
 	/* Div de Texto*/
 	divTexto.classList.add("divTexto");
@@ -113,9 +113,12 @@ function editarNota (event) {
 	var texto = nota.querySelector(".texto").textContent;
 
 	console.log(texto);
-	inputTexto.value = texto;
+	form.texto.value = texto;
 
 	btnAdd.classList.add('invisivel');
+	btnCor.classList.add('invisivel');
+	labelCor.classList.add("invisivel");
+
 	form.appendChild(btnSalvar);
 };
 
@@ -126,6 +129,9 @@ btnSalvar.addEventListener("click", function(event){
 	
 	btnSalvar.remove();
 	btnAdd.classList.remove("invisivel");
+	btnCor.classList.remove("invisivel");
+	labelCor.classList.remove("invisivel");
+
 	form.reset();
 });
 
